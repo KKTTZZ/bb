@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+    <title>Main Screen</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+    <div id="loading-screen"> 
+        <img src="loading.gif" alt="Loading..."> 
+    </div> 
+    <div id="main-screen" style="display: none;"> 
+        <div id="top-bar"> 
+            <div id="coin-counter">Coins: 0</div> 
+        </div> 
+        <div id="xp-bar"> 
+            XP: <span id="xp-counter">0</span> 
+        </div> 
+        <div id="tap-area"> 
+            <img src="sailormoon-aesthetic.gif" id="tap-gif" alt="Tap me"> 
+        </div> 
+        <div id="bottom-bar"> 
+            <img src="4 (3).png" alt="Home" class="menu-icon" data-target="home-screen"> 
+            <img src="5 (1).png" alt="Settings" class="menu-icon" data-target="settings-screen"> 
+            <img src="6 (1).png" alt="Stats" class="menu-icon" data-target="stats-screen"> 
+            <img src="7.png" alt="Channels" class="menu-icon" data-target="channels-screen"> 
+        </div> 
+    </div> 
+ 
+    <!-- Заглушки --> 
+    <div id="settings-screen" style="display: none;"> 
+        <h2>Settings</h2> 
+        <p>Settings content goes here...</p> 
+        <button onclick="showScreen('main-screen')">Back to Main</button> 
+    </div> 
+    <div id="stats-screen" style="display: none;"> 
+        <h2>Stats</h2> 
+        <p>Stats content goes here...</p> 
+        <button onclick="showScreen('main-screen')">Back to Main</button> 
+    </div> 
+    <div id="channels-screen" style="display: none;"> 
+        <h2>Channels</h2> 
+        <ul> 
+            <li>Channel 1 <button>Subscribe</button></li> 
+            <li>Channel 2 <button>Subscribe</button></li> 
+            <li>Channel 3 <button>Subscribe</button></li> 
+        </ul> 
+        <button onclick="showScreen('main-screen')">Back to Main</button> 
+    </div> 
+ 
+    <script src="https://telegram.org/js/telegram-web-app.js"></script> 
+    <script src="script.js"></script> 
+</body> 
+</html>
